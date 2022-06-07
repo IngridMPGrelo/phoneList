@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Country extends Model
 {
     use HasFactory;
 
-    protected $table = 'customer';
-
-    public function country() {
-        return $this->belongsTo(Country::class);
+    public function customer() {
+        $this->belongsTo(Customer::class);
     }
 }
